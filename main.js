@@ -7,8 +7,6 @@ $(document).ready(function() {
       imageLink: $("#imgLnk").val(),
       category: $("#catId").val()
     };
-    console.log(formData);
-
     $.ajax({
       type: "POST",
       url: "http://localhost:3000/products",
