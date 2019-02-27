@@ -7,12 +7,25 @@ $(document).ready(function() {
       imageLink: $("#imgLnk").val(),
       category: $("#catId").val()
     };
+    console.log(formData);
+
     $.ajax({
       type: "POST",
       url: "http://localhost:3000/products",
       data: formData,
-      dataType: "application/json",
-      success: function(response) {}
+      success: () => {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000
+        });
+
+        Toast.fire({
+          type: "success",
+          title: "Added product successfully"
+        });
+      }
     });
   });
 });
