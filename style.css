@@ -143,3 +143,42 @@ body {
 }
 
 /*end of  about */
+/* store items */
+.store {
+  background: var(--mainGrey);
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.store-img {
+  transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img {
+  transform: scale(1.2);
+}
+.store-item-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: var(--mainYellow);
+  border-top-left-radius: 1rem;
+  transition: all 1s ease-in-out;
+  transform: translate(100%, 100%);
+}
+.img-container:hover .store-item-icon {
+  transform: translate(0, 0);
+}
+.store-item-icon:hover {
+  color: var(--mainWhite);
+}
+.store-item-value {
+  color: --mainYellow;
+}
+/*end of  store items */
+.search-box {
+  background: var(--mainPink);
+  color: var(--mainBlack);
+}
