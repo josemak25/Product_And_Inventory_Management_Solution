@@ -1,16 +1,25 @@
 $(document).ready(function() {
-  $("form").submit(function(e) {
+  const formName = $("#name");
+  const formDescription = $("#describe");
+  const formImageLink = $("#imgLnk");
+  const formPrice = $("#price");
+  const formCategory = $("#catId");
+
+  $("#newProduct").on("click", function(e) {
     e.preventDefault();
-    const formData = {
-      name: $("#name").val(),
-      description: $("#describe").val(),
-      imageLink: $("#imgLnk").val(),
-      category: $("#catId").val()
+    const FormData = {
+      name: formName.val(),
+      description: formDescription.val(),
+      imageLink: formImageLink.val(),
+      price: formPrice.val(),
+      category: formCategory.val()
     };
+    $("#newProduct").trigger("reset");
+
     $.ajax({
       type: "POST",
       url: "http://localhost:3000/products",
-      data: formData,
+      data: FormData,
       success: () => {
         const Toast = Swal.mixin({
           toast: true,
