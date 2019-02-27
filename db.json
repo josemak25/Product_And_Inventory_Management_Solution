@@ -12,5 +12,13 @@
       "quantity": 19,
       "price": "$35"
     }
+  ],
+  "category": [
+    {
+      "computing": "dummy",
+      "grocery": "dummy",
+      "fasion": "dummy",
+      "electronics": "dummy"
+    }
   ]
 }
