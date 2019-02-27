@@ -4,21 +4,18 @@
       "id": 1,
       "name": "lenovo G40",
       "description": "A lenovo system with core i5 8gb ram and 4gb graphics",
-      "imageLink": "image directory"
-    }
-  ],
-  "availability": [
-    {
-      "quantity": 19,
-      "price": "$35"
+      "imageLink": "image directory",
+      "price": "$35",
+      "category": 1
     }
   ],
   "category": [
     {
-      "computing": "dummy",
-      "grocery": "dummy",
-      "fasion": "dummy",
-      "electronics": "dummy"
-    }
+      "cartId": 1,
+      "computing": "computing"
+    },
+    { "cartId": 2, "grocery": "grocery" },
+    { "cartId": 3, "fashion": "fashion" },
+    { "cartId": 4, "electronics": "electronics" }
   ]
 }
