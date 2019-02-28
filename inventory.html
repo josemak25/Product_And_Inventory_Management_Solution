@@ -19,31 +19,36 @@
       <span class="yellow">Inventory </span>
     </h1>
     <h2>Add, edit and remove <a href="#">A Products Here</a></h2>
-
-    <table class="container">
-      <thead>
-        <tr>
-          <th><h1>Name</h1></th>
-          <th><h1>Price</h1></th>
-          <th><h1>Category</h1></th>
-          <th><h1>Avaliabilty</h1></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Orange</td>
-          <td>$34</td>
-          <td>Grocery</td>
-          <td>51</td>
-        </tr>
-        <tr>
-          <td>Orange</td>
-          <td>$34</td>
-          <td>Grocery</td>
-          <td>51</td>
-        </tr>
-      </tbody>
-    </table>
+    <form method="post" id="product_table">
+      <table class="container">
+        <thead>
+          <tr>
+            <th><h1>Name</h1></th>
+            <th><h1>Price</h1></th>
+            <th><h1>Category</h1></th>
+            <th><h1>Avaliabilty</h1></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Orange</td>
+            <td>$34</td>
+            <td>Grocery</td>
+            <td>51</td>
+            <td><a>edit</a></td>
+            <td><a>remove</a></td>
+          </tr>
+          <tr>
+            <td>Orange</td>
+            <td>$34</td>
+            <td>Grocery</td>
+            <td>51</td>
+            <td><a>edit</a></td>
+            <td><a>remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
