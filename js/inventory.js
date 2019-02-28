@@ -1,27 +1,34 @@
 $(document).ready(function() {
+  //declare all form values
   const $tr = $("#tablepopulate");
   const formName = $("#name");
+  const formDescription = $("#describe");
   const formQuantity = $("#prodQaun");
+  const formImageLink = $("#imgLnk");
   const formPrice = $("#price");
   const formCategory = $("#catId");
+  //function to help print data on page
   function populate(product) {
-    console.log(product.name);
     $tr.append(`
       <tr> <td>${product.name}</td>
       <td>${product.price}</td>
       <td>${product.category}</td>
       <td>${product.qauntity}</td>
       <td>
-        <a id="editButton" data-toggle="modal" data-target="#exampleModal"
+      <input type"text" id="getme" value="${product.id}" style="display:none;">
+        <a id="editButton" data-id=${
+          product.id
+        } data-toggle="modal" data-target="#exampleModal"
           >edit</a
         >
       </td>
       <td>
-        <a id="deleteButton">remove</a>
+        <a id="deleteButton" data-id=${product.id}>remove</a>
       </td>
       </tr>`);
   }
 
+  //ajax call db data to page
   $.ajax({
     type: "GET",
     url: "http://localhost:3000/products",
@@ -31,6 +38,8 @@ $(document).ready(function() {
       });
     }
   });
+
+  //on edit click update a product
   $("#newProduct").on("click", function(e) {
     e.preventDefault();
     const FormData = {
@@ -45,7 +54,7 @@ $(document).ready(function() {
 
     $.ajax({
       type: "PUT",
-      url: "http://localhost:3000/products",
+      url: "http://localhost:3000/products/" + $("#getme").val(),
       data: FormData,
       success: () => {
         const Toast = Swal.mixin({
@@ -58,6 +67,30 @@ $(document).ready(function() {
         Toast.fire({
           type: "success",
           title: "Updated product successfully"
+        });
+      }
+    });
+  });
+
+  // delete press delete a product
+  $("tbody").delegate("#deleteButton", "click", function(e) {
+    e.preventDefault();
+    let tableRow = $(this).closest("tr");
+    $.ajax({
+      type: "DELETE",
+      url: "http://localhost:3000/products/" + $(this).attr("data-id"),
+      success: () => {
+        $(this).remove();
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000
+        });
+
+        Toast.fire({
+          type: "success",
+          title: "Deleted successfully"
         });
       }
     });
