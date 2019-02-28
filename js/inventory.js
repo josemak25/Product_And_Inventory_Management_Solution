@@ -18,7 +18,7 @@ $(document).ready(function() {
       <input type"text" id="getme" value="${product.id}" style="display:none;">
         <a id="editButton" data-id=${
           product.id
-        } data-toggle="modal" data-target="#editModal"
+        } data-toggle="modal" data-target="#exampleModal"
           >edit</a
         >
       </td>
@@ -40,7 +40,7 @@ $(document).ready(function() {
   });
 
   //on edit click update a product
-  $("#updProduct").on("click", function(e) {
+  $("#newProduct").on("click", function(e) {
     e.preventDefault();
     const FormData = {
       name: formName.val(),
@@ -50,7 +50,7 @@ $(document).ready(function() {
       price: formPrice.val(),
       category: formCategory.val()
     };
-    $("#updProduct").trigger("reset");
+    $("#newProduct").trigger("reset");
 
     $.ajax({
       type: "PUT",
@@ -76,6 +76,7 @@ $(document).ready(function() {
   $("tbody").delegate("#deleteButton", "click", function(e) {
     e.preventDefault();
     let tableRow = $(this).closest("tr");
+    console.log(tableRow);
     $.ajax({
       type: "DELETE",
       url: "http://localhost:3000/products/" + $(this).attr("data-id"),
@@ -95,23 +96,4 @@ $(document).ready(function() {
       }
     });
   });
-  $.ajax({
-    type: "POST",
-    url: "http://localhost:3000/products",
-    data: FormData,
-    success: () => {
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000
-      });
-
-      Toast.fire({
-        type: "success",
-        title: "Added product successfully"
-      });
-    }
-  });
-});
 });

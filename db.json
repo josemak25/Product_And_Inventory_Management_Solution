@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "name": "banana",
-      "description": "a nice good fruit for eating",
-      "qauntity": "35",
-      "imageLink": "google.com",
-      "price": "32",
+      "name": "rgt",
+      "description": "eq",
+      "qauntity": "wq",
+      "imageLink": "rw",
+      "price": "wrq",
       "category": "grocery",
       "id": 1
     }
