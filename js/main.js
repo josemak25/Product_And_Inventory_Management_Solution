@@ -116,4 +116,46 @@ $(document).ready(function() {
       }
     });
   });
+  $("#grocery").on("click", function(e) {
+    e.preventDefault();
+    $storeCards.empty();
+
+    $.ajax({
+      type: "GET",
+      url: "http://localhost:3000/products?category=grocery",
+      success: response => {
+        $.each(response, (i, product) => {
+          populate(product);
+        });
+      }
+    });
+  });
+  $("#computing").on("click", function(e) {
+    e.preventDefault();
+    $storeCards.empty();
+
+    $.ajax({
+      type: "GET",
+      url: "http://localhost:3000/products?category=computing",
+      success: response => {
+        $.each(response, (i, product) => {
+          populate(product);
+        });
+      }
+    });
+  });
+  $("#fashion").on("click", function(e) {
+    e.preventDefault();
+    $storeCards.empty();
+
+    $.ajax({
+      type: "GET",
+      url: "http://localhost:3000/products?category=fashion",
+      success: response => {
+        $.each(response, (i, product) => {
+          populate(product);
+        });
+      }
+    });
+  });
 });
