@@ -11,9 +11,59 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/inventory.css" />
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg px-4">
+        <a class="navbar-brand" href="index.html"
+          ><img src="img/logo.svg" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#myNav"
+        >
+          <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNav">
+          <ul class="navbar-nav mx-auto text-capitalize">
+            <li class="nav-item">
+              <a class="nav-link " href="#">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                >New product</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- banner  -->
+      <div class="container-fluid">
+        <div class="row max-height justify-content-center align-items-center">
+          <div class="col-10 mx-auto banner text-center">
+            <h1 class="text-capitalize">
+              welcome to <strong class="banner-title ">ProdMag</strong>
+            </h1>
+            <a href="#store" class="btn banner-link text-uppercase my-2"
+              >inventory</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
     <h1>
       <span class="blue">&lt;</span>Your<span class="blue">&gt;</span>
       <span class="yellow">Inventory </span>
