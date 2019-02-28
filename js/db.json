@@ -6,7 +6,8 @@
       "description": "A lenovo system with core i5 8gb ram and 4gb graphics",
       "imageLink": "image directory",
       "price": "$35",
-      "category": "computing"
+      "category": "computing",
+      "qauntity": "40"
     }
   ],
   "category": [
