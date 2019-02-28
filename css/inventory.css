@@ -118,3 +118,10 @@ h2 a {
     display: none;
   }
 }
+
+#editButton {
+  cursor: pointer;
+}
+#deleteButton {
+  cursor: pointer;
+}
