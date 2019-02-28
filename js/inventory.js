@@ -95,4 +95,23 @@ $(document).ready(function() {
       }
     });
   });
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:3000/products",
+    data: FormData,
+    success: () => {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000
+      });
+
+      Toast.fire({
+        type: "success",
+        title: "Added product successfully"
+      });
+    }
+  });
+});
 });
