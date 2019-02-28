@@ -4,12 +4,14 @@ $(document).ready(function() {
   const formImageLink = $("#imgLnk");
   const formPrice = $("#price");
   const formCategory = $("#catId");
+  const formQuantity = $("#prodQaun");
 
   $("#newProduct").on("click", function(e) {
     e.preventDefault();
     const FormData = {
       name: formName.val(),
       description: formDescription.val(),
+      quantity: formQuantity.val(),
       imageLink: formImageLink.val(),
       price: formPrice.val(),
       category: formCategory.val()
