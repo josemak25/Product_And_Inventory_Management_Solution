@@ -54,43 +54,6 @@ body {
   background: var(--mainBlack);
   color: var(--mainPink);
 }
-/* endo of banner */
-/* cart  */
-.cart {
-  position: absolute;
-  min-height: 10rem;
-  background: var(--mainWhite);
-  top: 0;
-  right: 0;
-  transition: all 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.5);
-  width: 0;
-  overflow: hidden;
-}
-.show-cart {
-  width: 18rem;
-  padding: 2rem 1.5rem;
-  transform: rotateY(-360deg);
-}
-.cart-item {
-  transition: all 2s ease-in-out;
-}
-
-/* end of cart */
-/* cart item */
-.cart-item-remove {
-  color: var(--mainPink);
-  transition: all 1s ease-in-out;
-}
-.cart-item-remove:hover {
-  transform: scale(1.1);
-  color: var(--mainBlack);
-}
-#cart-item-price {
-  font-size: 0.8rem;
-}
-/* cart item */
-/* cart buttons */
 .btn-pink {
   color: var(--mainPink) !important;
   border-color: var(--mainPink) !important;
@@ -170,4 +133,7 @@ body {
 .search-box {
   background: var(--mainPink);
   color: var(--mainBlack);
+}
+#search-icon {
+  cursor: pointer;
 }

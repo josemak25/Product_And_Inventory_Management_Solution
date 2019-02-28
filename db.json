@@ -1,13 +1,31 @@
 {
   "products": [
     {
-      "name": "rgt",
-      "description": "eq",
-      "qauntity": "wq",
-      "imageLink": "rw",
-      "price": "wrq",
-      "category": "grocery",
-      "id": 1
+      "name": "wq3fqewda",
+      "description": "efq",
+      "qauntity": "eqfe",
+      "imageLink": "eqfqwe",
+      "price": "wwfr",
+      "category": "electronics",
+      "id": 2
+    },
+    {
+      "name": "HP pro 54",
+      "description": "microsft surface laptop ",
+      "qauntity": "32",
+      "imageLink": "https://azcd.harveynorman.com.au/media/catalog/product/cache/21/image/992x558/9df78eab33525d08d6e5fb8d27136e95/s/u/surface-laptop-2-platinum_2.jpg",
+      "price": "247",
+      "category": "computing",
+      "id": 4
+    },
+    {
+      "name": "infinix",
+      "description": "good mobile phone ",
+      "qauntity": "32",
+      "imageLink": "https://www.spyequipmentuk.co.uk/wp-content/uploads/2016/09/Samsung-Galaxy-A8-Spy-Phone.jpg",
+      "price": "242",
+      "category": "electronics",
+      "id": 5
     }
   ],
   "category": [
