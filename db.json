@@ -1,13 +1,13 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "lenovo G40",
-      "description": "A lenovo system with core i5 8gb ram and 4gb graphics",
-      "imageLink": "image directory",
-      "price": "$35",
-      "category": "computing",
-      "qauntity": "40"
+      "name": "banana",
+      "description": "a nice good fruit for eating",
+      "qauntity": "35",
+      "imageLink": "google.com",
+      "price": "32",
+      "category": "grocery",
+      "id": 1
     }
   ],
   "category": [

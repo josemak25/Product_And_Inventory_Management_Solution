@@ -18,7 +18,7 @@ $(document).ready(function() {
       <input type"text" id="getme" value="${product.id}" style="display:none;">
         <a id="editButton" data-id=${
           product.id
-        } data-toggle="modal" data-target="#exampleModal"
+        } data-toggle="modal" data-target="#editModal"
           >edit</a
         >
       </td>
@@ -40,7 +40,7 @@ $(document).ready(function() {
   });
 
   //on edit click update a product
-  $("#newProduct").on("click", function(e) {
+  $("#updProduct").on("click", function(e) {
     e.preventDefault();
     const FormData = {
       name: formName.val(),
@@ -50,7 +50,7 @@ $(document).ready(function() {
       price: formPrice.val(),
       category: formCategory.val()
     };
-    $("#newProduct").trigger("reset");
+    $("#updProduct").trigger("reset");
 
     $.ajax({
       type: "PUT",
