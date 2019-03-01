@@ -71,6 +71,39 @@ $(document).ready(function() {
     });
   });
 
+  // add new product
+
+  $("#addProduct").on("click", function(e) {
+    e.preventDefault();
+    const FormData = {
+      name: formName.val(),
+      description: formDescription.val(),
+      qauntity: formQuantity.val(),
+      imageLink: formImageLink.val(),
+      price: formPrice.val(),
+      category: formCategory.val()
+    };
+    $("#addProduct").trigger("reset");
+    $.ajax({
+      type: "PUT",
+      url: "http://localhost:3000/products/",
+      data: FormData,
+      success: () => {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000
+        });
+
+        Toast.fire({
+          type: "success",
+          title: "Added product successfully"
+        });
+      }
+    });
+  });
+
   // delete press delete a product
   $("tbody").delegate("#deleteButton", "click", function(e) {
     e.preventDefault();
