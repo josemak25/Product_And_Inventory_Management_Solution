@@ -1,12 +1,22 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "lenovo G40",
-      "description": "A lenovo system with core i5 8gb ram and 4gb graphics",
-      "imageLink": "image directory",
-      "price": "$35",
-      "category": "computing"
+      "name": "",
+      "description": "",
+      "qauntity": "",
+      "imageLink": "",
+      "price": "",
+      "category": "computing",
+      "id": 5
+    },
+    {
+      "name": "gold",
+      "description": "aSDSFAEADSGHTJMHFNSFND,GYED",
+      "quantity": "234",
+      "imageLink": "http://img.mofuse.net/?w=305&h=0&c=0&t=4&i=87d38d97149684e4c9fd7656143cb6b0&z=1&s=http%3A%2F%2Fpremium.mofusecdn.com%2F87d38d97149684e4c9fd7656143cb6b0%2Fstatic%2Fuploads%2F61053c60c9895312f3d0fcfad5c2809d.jpg",
+      "price": "34",
+      "category": "grocery",
+      "id": 6
     }
   ],
   "category": [
@@ -21,6 +31,14 @@
     },
     {
       "electronics": "electronics"
+    }
+  ],
+  "admin": [
+    {
+      "username": "password"
+    },
+    {
+      "password": "password"
     }
   ]
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 
 :root {
   --mainPink: #ef7998;
@@ -54,43 +54,6 @@ body {
   background: var(--mainBlack);
   color: var(--mainPink);
 }
-/* endo of banner */
-/* cart  */
-.cart {
-  position: absolute;
-  min-height: 10rem;
-  background: var(--mainWhite);
-  top: 0;
-  right: 0;
-  transition: all 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.5);
-  width: 0;
-  overflow: hidden;
-}
-.show-cart {
-  width: 18rem;
-  padding: 2rem 1.5rem;
-  transform: rotateY(-360deg);
-}
-.cart-item {
-  transition: all 2s ease-in-out;
-}
-
-/* end of cart */
-/* cart item */
-.cart-item-remove {
-  color: var(--mainPink);
-  transition: all 1s ease-in-out;
-}
-.cart-item-remove:hover {
-  transform: scale(1.1);
-  color: var(--mainBlack);
-}
-#cart-item-price {
-  font-size: 0.8rem;
-}
-/* cart item */
-/* cart buttons */
 .btn-pink {
   color: var(--mainPink) !important;
   border-color: var(--mainPink) !important;
@@ -171,58 +134,17 @@ body {
   background: var(--mainPink);
   color: var(--mainBlack);
 }
-
-/* ligthbox */
-
-.lightbox-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.6) !important;
-  display: none;
-}
-.show {
-  display: block;
-}
-
-.lightbox-holder {
-  position: relative;
-}
-.lightbox-item {
-  min-height: 80vh;
-  background: url("../img/cake-1.jpeg") center/cover fixed no-repeat;
-  border-radius: 0.3rem;
-}
-.lightbox-close {
-  color: var(--mainPink);
-  font-size: 3rem;
-  transition: all 1s ease-in-out;
+#search-icon {
   cursor: pointer;
 }
-.lightbox-close:hover {
-  color: var(--mainYellow);
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 20rem;
 }
 
-.lightbox-control {
-  position: absolute;
-  font-size: 4rem;
-  color: var(--mainPink);
-  transition: all 1s linear;
-  cursor: pointer;
-}
-.lightbox-control:hover {
-  color: var(--mainYellow);
-}
-.btnLeft {
-  top: 50%;
-  left: 0;
-  transform: translateX(-60%);
-}
-.btnRight {
-  top: 50%;
-  right: 0;
-  transform: translateX(60%);
+.card {
+  width: 70%;
+  height: 80%;
 }
