@@ -22,7 +22,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg px-4">
-        <a class="navbar-brand" href="index.html"
+        <a class="navbar-brand" href="home.html"
           ><img src="img/logo.svg" alt=""
         /></a>
         <button
@@ -35,21 +35,11 @@
         </button>
         <div class="collapse navbar-collapse" id="myNav">
           <ul class="navbar-nav mx-auto text-capitalize">
-            
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#"
-                data-toggle="modal"
-                data-target="#exampleModal"
-                >New product</a
-              >
+              <!--  -->
             </li>
-            
           </ul>
           <ul class="navbar-nav mx-auto text-capitalize">
-            
-            
             <li class="nav-item">
               <a class="nav-link " href="#">Logout</a>
             </li>
@@ -79,10 +69,10 @@
               Welcome <strong class="banner-title ">David</strong>
             </h1>
             <p class="my-4 text-muted w-75">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              aliquam voluptas beatae vitae expedita consectetur nesciunt quia
-              deserunt asperiores facere fuga dicta fugiat corrupti et omnis
-              porro at dolorum! Ad!
+              ProdMag helps your keep track of your next business sales and
+              product, by our inbuilt automated system, that helps your record a
+              new product for sale, with our flexible system for re-editing a
+              product in stock, To view your inventory click here
             </p>
             <a
               href="inventory.html"
@@ -105,7 +95,14 @@
         <div class="row">
           <div class="col-10 mx-auto col-sm-6 text-center">
             <h1 class="text-capitalize">
-              your <strong class="banner-title ">store</strong>
+              Add
+              <a
+                class="nav-link"
+                href="#"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                ><strong class="banner-title ">Product</strong></a
+              >
             </h1>
           </div>
         </div>
@@ -118,25 +115,26 @@
             <a
               href="#"
               class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-              data-filter="cakes" id="computing"
+              data-filter="cakes"
+              id="computing"
               >computing</a
             >
             <a
               href="#"
               class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-               id="grocery"
+              id="grocery"
               >grocery</a
             >
             <a
               href="#"
               class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-               id="fashion"
+              id="fashion"
               >fashion</a
             >
             <a
               href="#"
               class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
-               id="electronics"
+              id="electronics"
               >electronics</a
             >
           </div>
@@ -163,11 +161,9 @@
         </div>
         <!--end of filter buttons -->
         <!-- store  items-->
-        <div class="row" class="store-items" id="store-items">
-          </div>
-          <!--end of single store item-->
-          <!-- single item -->
-        </div>
+        <div class="row" class="store-items" id="store-items"></div>
+        <!--end of single store item-->
+        <!-- single item -->
       </div>
     </section>
     <!--end of store items -->
