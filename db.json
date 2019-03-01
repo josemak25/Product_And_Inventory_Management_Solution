@@ -1,22 +1,22 @@
 {
   "products": [
     {
-      "name": "",
-      "description": "",
-      "qauntity": "",
-      "imageLink": "",
-      "price": "",
-      "category": "computing",
-      "id": 5
+      "name": "Bugger",
+      "description": "A nice creamy meat bread",
+      "qauntity": "23",
+      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
+      "price": "242",
+      "category": "grocery",
+      "id": 1
     },
     {
-      "name": "gold",
-      "description": "aSDSFAEADSGHTJMHFNSFND,GYED",
-      "quantity": "234",
-      "imageLink": "http://img.mofuse.net/?w=305&h=0&c=0&t=4&i=87d38d97149684e4c9fd7656143cb6b0&z=1&s=http%3A%2F%2Fpremium.mofusecdn.com%2F87d38d97149684e4c9fd7656143cb6b0%2Fstatic%2Fuploads%2F61053c60c9895312f3d0fcfad5c2809d.jpg",
+      "name": "chicken salad",
+      "description": "A nice creamy meat bread",
+      "quantity": "23",
+      "imageLink": "https://d1bjorv296jxfn.cloudfront.net/s3fs-public/styles/recipes_header_image/public/recipe-images/sargento/California_ChickenSaladWrap_with_2_Cheese_Cheddar_web.jpg?itok=gaZPXHY0",
       "price": "34",
       "category": "grocery",
-      "id": 6
+      "id": 2
     }
   ],
   "category": [
@@ -35,7 +35,7 @@
   ],
   "admin": [
     {
-      "username": "password"
+      "username": "username"
     },
     {
       "password": "password"
