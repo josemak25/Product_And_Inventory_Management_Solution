@@ -1,0 +1,24 @@
+/* Importing font for page*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+/*adding default styles for html and body elements*/
+
+* {
+  margin: 0px; 
+  padding: 0px; 
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: sans-serif;
+  color: #444343
+}
+
+/*Adding styles for navBar*/
+
+#headerNav {
+  display: flex;
+  justify-content: space-between
+}
