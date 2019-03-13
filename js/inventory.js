@@ -1,6 +1,19 @@
 $(document).ready(function() {
 //form table padginatio action call
-$('#example').DataTable();
+$('#example').DataTable({
+  language: { 
+    search: '<button type="submit" class="btn btn-search fa fa-search"></button>', 
+    searchPlaceholder: "Search via product name, quantity or expiring date"
+  },
+//   'language': {
+//     search: '<div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>',
+//     searchPlaceholder: 'Your placeholder...',
+//     lengthMenu: '<div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-list"></span></span>_MENU_</div>',
+// }
+});
+
+//Add a placeholder text to search field
+// $(".form-control").attr('placeholder', 'Search via product name, price, quantity or expiring date')
 
   //declare all form values
   const $tr = $("#tablepopulate");
