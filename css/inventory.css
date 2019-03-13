@@ -1,8 +1,8 @@
-/* Importing font for page*/
+/* Importing font for page */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 
-/*adding default styles for html and body elements*/
+/* adding default styles for html and body elements */
 
 * {
   margin: 0px; 
@@ -16,9 +16,47 @@ body, html {
   color: #444343
 }
 
-/*Adding styles for navBar*/
+/* Adding styles for navBar */
 
 #headerNav {
   display: flex;
   justify-content: space-between
+}
+
+
+ /* ---------All Button Actions-------- */
+ button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+  font-size: 1.4em;
+  transform: scale(1.1); 
+}
+
+
+/* Logout Button */
+#Logout {
+  width: 140px;
+height: 45px;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+font-weight: 500;
+color: #000;
+background-color: #fff;
+border: none;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+}
+
+#Logout:hover {
+  background-color: #2EE59D;
+box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+color: #fff;
+transform: translateY(-7px);
 }
