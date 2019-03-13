@@ -43,75 +43,7 @@
                             <th class="column6">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="column1">2017-09-29 01:22</td>
-                            <td class="column2">200398</td>
-                            <td class="column3">iPhone X 64Gb Grey</td>
-                            <td class="column4">$999.00</td>
-                            <td class="column5">1</td>
-                            <td class="column6">
-                                <div>
-                                    <button id="editButton">
-                                        <i class="fas fa-marker"></i>
-                                    </button>
-                                    <button id="deleteButton">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="column1">2017-09-28 05:57</td>
-                            <td class="column2">200397</td>
-                            <td class="column3">Samsung S8 Black</td>
-                            <td class="column4">$756.00</td>
-                            <td class="column5">1</td>
-                            <td class="column6">
-                                <div>
-                                    <button id="editButton">
-                                        <i class="fas fa-marker"></i>
-                                    </button>
-                                    <button id="deleteButton">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="column1">2017-09-28 05:57</td>
-                            <td class="column2">200397</td>
-                            <td class="column3">Samsung S8 Black</td>
-                            <td class="column4">$756.00</td>
-                            <td class="column5">1</td>
-                            <td class="column6">
-                                <div>
-                                    <button id="editButton">
-                                        <i class="fas fa-marker"></i>
-                                    </button>
-                                    <button id="deleteButton">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="column1">2017-09-28 05:57</td>
-                            <td class="column2">200397</td>
-                            <td class="column3">Samsung S8 Black</td>
-                            <td class="column4">$756.00</td>
-                            <td class="column5">1</td>
-                            <td class="column6">
-                                <div>
-                                    <button id="editButton">
-                                        <i class="fas fa-marker"></i>
-                                    </button>
-                                    <button id="deleteButton">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                    <tbody id="tablepopulate">
                     </tbody>
                 </table>
             </div>
@@ -119,6 +51,118 @@
     </div>
 </div>
 <!--End of Table-->
+
+<!--start of edit modal -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Product details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="post">
+              <div class="form-group">
+                <label for="formGroupExampleInput">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Name of product"
+                  required
+                />
+                <label for="formGroupExampleInput">Price</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="price"
+                  placeholder="Price of product $34"
+                  required
+                />
+                <label for="formGroupExampleInput">Quantity</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="prodQaun"
+                  placeholder="Quantity of the product 34"
+                  required
+                />
+                <label for="formGroupExampleInput">Expiring date</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="expireDate"
+                  placeholder="Please input an online resource of product image here"
+                  required
+                />
+                <label for="formGroupExampleInput">Product description</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="describe"
+                  placeholder="A little discription of the product"
+                  required
+                />
+                <label for="formGroupExampleInput">Image for product</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="imgLnk"
+                  placeholder="Please input an online resource of product image here"
+                  required
+                />
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1"
+                    >Product category</label
+                  >
+                  <select class="form-control" id="catId">
+                    <option>computing</option>
+                    <option>grocery</option>
+                    <option>fashion</option>
+                    <option>electronics</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+            id="closeButton"
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              id="newProduct"
+              type="button"
+              class="btn btn-primary"
+              data-dismiss="modal"
+            >
+              Save product
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end of registration modal -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

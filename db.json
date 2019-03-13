@@ -1,21 +1,13 @@
 {
   "products": [
     {
-      "name": "Bugger",
-      "description": "A nice creamy meat bread",
-      "qauntity": "23",
+      "name": "Samsung S8 Black",
+      "description": "A nice mobile phone",
+      "qauntity": "53",
       "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
-      "price": "242",
-      "category": "grocery",
-      "id": 1
-    },
-    {
-      "name": "chicken salad",
-      "description": "A nice creamy meat bread",
-      "quantity": "23",
-      "imageLink": "https://d1bjorv296jxfn.cloudfront.net/s3fs-public/styles/recipes_header_image/public/recipe-images/sargento/California_ChickenSaladWrap_with_2_Cheese_Cheddar_web.jpg?itok=gaZPXHY0",
-      "price": "34",
-      "category": "grocery",
+      "price": "$756.00",
+      "expireDate": "2017-09-29",
+      "category": "computing",
       "id": 2
     }
   ],
