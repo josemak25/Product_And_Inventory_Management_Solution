@@ -1,4 +1,7 @@
 $(document).ready(function() {
+//form table padginatio action call
+$('#example').DataTable();
+
   //declare all form values
   const $tr = $("#tablepopulate");
   const formName = $("#name");

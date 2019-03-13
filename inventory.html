@@ -15,17 +15,109 @@
 </head>
 
 <body>
-
+<!--Start of Navbar-->
     <nav id="headerNav" class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="img/logo.svg" alt="">
         </a>
-
         <a class="nav-link" href="#">
             <button id="Logout" class="nav-item">Logout</button>
         </a>
-
     </nav>
+<!--End of Navbar-->
+
+<!--Start of Table-->
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100">
+                <table id="example" style="width:100%">
+                    <thead>
+                        <tr class="table100-head">
+                            <th class="column1">Expiring Date</th>
+                            <th class="column2">Category</th>
+                            <th class="column3">Name</th>
+                            <th class="column4">Price</th>
+                            <th class="column5">Quantity</th>
+                            <th class="column6">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="column1">2017-09-29 01:22</td>
+                            <td class="column2">200398</td>
+                            <td class="column3">iPhone X 64Gb Grey</td>
+                            <td class="column4">$999.00</td>
+                            <td class="column5">1</td>
+                            <td class="column6">
+                                <div>
+                                    <button id="editButton">
+                                        <i class="fas fa-marker"></i>
+                                    </button>
+                                    <button id="deleteButton">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column1">2017-09-28 05:57</td>
+                            <td class="column2">200397</td>
+                            <td class="column3">Samsung S8 Black</td>
+                            <td class="column4">$756.00</td>
+                            <td class="column5">1</td>
+                            <td class="column6">
+                                <div>
+                                    <button id="editButton">
+                                        <i class="fas fa-marker"></i>
+                                    </button>
+                                    <button id="deleteButton">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column1">2017-09-28 05:57</td>
+                            <td class="column2">200397</td>
+                            <td class="column3">Samsung S8 Black</td>
+                            <td class="column4">$756.00</td>
+                            <td class="column5">1</td>
+                            <td class="column6">
+                                <div>
+                                    <button id="editButton">
+                                        <i class="fas fa-marker"></i>
+                                    </button>
+                                    <button id="deleteButton">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column1">2017-09-28 05:57</td>
+                            <td class="column2">200397</td>
+                            <td class="column3">Samsung S8 Black</td>
+                            <td class="column4">$756.00</td>
+                            <td class="column5">1</td>
+                            <td class="column6">
+                                <div>
+                                    <button id="editButton">
+                                        <i class="fas fa-marker"></i>
+                                    </button>
+                                    <button id="deleteButton">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of Table-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -37,7 +129,7 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="index.js"></script>
+    <script src="js/inventory.js"></script>
 </body>
 
 </html>
