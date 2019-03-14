@@ -1,14 +1,24 @@
 {
   "products": [
     {
-      "name": "Samsung S8 Black",
+      "name": "Iphone",
       "description": "A nice mobile phone",
-      "qauntity": "53",
+      "qauntity": "10",
       "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
-      "price": "$756.00",
-      "expireDate": "2017-09-29",
+      "price": "$9",
+      "expireDate": "2019-03-21",
       "category": "computing",
       "id": 2
+    },
+    {
+      "name": "meeeeee",
+      "description": "A nice mobile",
+      "qauntity": "6",
+      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
+      "price": "eqfeq",
+      "expireDate": "2019-03-27",
+      "category": "fashion",
+      "id": 3
     }
   ],
   "category": [
