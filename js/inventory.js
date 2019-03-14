@@ -19,7 +19,7 @@ $(document).ready(function () {
       <td class="column3">${product.name}</td>
       <td class="column4">${product.price}</td>
       <td class="column5">${product.qauntity}</td>
-      <input type"text" id="getme" value="${product.id}" style="display:none;">
+      <span type"text" id="getme" value="${product.id}" style="display:none;"></span>
       <td class="column6">
           <div>
               <button id="editButton" id="editButton" data-toggle="modal" data-target="#exampleModal">
@@ -32,6 +32,14 @@ $(document).ready(function () {
       </td>
   </tr>`);
   }
+
+  //script for form date picker
+  $(function() {
+    $('#expireDate').datepicker({
+        'format': 'yyyy-mm-dd',
+        'autoclose': true
+    });
+});
 
   //ajax call db data to page
   $.ajax({
@@ -54,7 +62,7 @@ $(document).ready(function () {
   });
 
   //on edit click update a product
-  $("#newProduct").on("click", function (e) {
+  $("#editProduct").on("click", function (e) {
     e.preventDefault();
     const FormData = {
       name: formName.val(),
@@ -65,9 +73,9 @@ $(document).ready(function () {
       category: formCategory.val(),
       expireDate: formDate.val()
     };
-    $("#newProduct").trigger("reset");
+    $("#editProduct").trigger("reset");
     $.ajax({
-      type: "PUT",
+      type: "PATCH",
       url: "http://localhost:3000/products/" + $("#getme").val(),
       data: FormData,
       success: () => {
@@ -100,7 +108,7 @@ $(document).ready(function () {
     };
     $("#addProduct").trigger("reset");
     $.ajax({
-      type: "PUT",
+      type: "POST",
       url: "http://localhost:3000/products/",
       data: FormData,
       success: () => {

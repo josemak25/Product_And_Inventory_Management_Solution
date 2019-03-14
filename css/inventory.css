@@ -94,7 +94,7 @@ transform: translateY(-7px);
 }
 
 
-#newProduct {
+#editProduct {
   width: 140px;
   height: 45px;
   font-size: 12px;
@@ -401,6 +401,15 @@ tbody tr:hover {
 
 #catId {
   border-radius: 2rem !important  
+}
+
+/*-----date picker style ------*/
+.table-condensed thead tr {
+  height: 0
+}
+
+.table-condensed tbody tr {
+  height: 0
 }
 
 @media screen and (max-width: 767px) {
