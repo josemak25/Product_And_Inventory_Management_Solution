@@ -120,7 +120,7 @@ transform: translateY(-7px);
   background-color: #fff;
   border: none;
   border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(131, 44, 44, 0.1);
   transition: all 0.3s ease 0s; 
 }
 /* Table Styles */
@@ -364,7 +364,44 @@ tbody tr:hover {
   transition: all .5s ease-in-out;
 }
 
+/*---- Modal Styles ------*/
 
+.modal-content {
+  width: 83%
+}
+
+.modal-header {
+  height: 3rem;
+  margin-bottom: -2rem
+}
+
+.modal-body {
+  height: 35rem;
+  width: 28rem;
+  margin-left: -1.2rem
+}
+
+.formGroupField {
+  padding: 2rem
+}
+
+.form-group label {
+  margin-left: 0.3rem
+}
+
+.modal-footer {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around
+}
+
+.modalInput {
+  border-radius: 2rem
+}
+
+#catId {
+  border-radius: 2rem !important  
+}
 
 @media screen and (max-width: 767px) {
   #searchBtn {

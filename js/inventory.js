@@ -46,7 +46,7 @@ $(document).ready(function () {
        //form table padginatio action call
   $('#example').DataTable({
     language: {
-      search: '<button type="submit" class="btn btn-search fa fa-search"></button>',
+      search: '<button id="searchBtn" type="submit" class="btn btn-search fa fa-search"></button>',
       searchPlaceholder: "Search via product name, quantity or expiring date"
     },
   });
