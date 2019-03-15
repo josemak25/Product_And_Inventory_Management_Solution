@@ -70,6 +70,7 @@
         <div class="modal-body">
           <form method="post">
             <div class="form-group formGroupField">
+              <input id="id" hidden type="text">
               <label for="formGroupExampleInput">Name</label>
               <input type="text" class="form-control modalInput" id="name" placeholder="Name of product" required />
               <label for="formGroupExampleInput">Price</label>
@@ -101,7 +102,7 @@
           <button id="closeButton" type="button" class="btn btn-secondary" data-dismiss="modal">
             Close
           </button>
-          <button id="editProduct" type="button" class="btn btn-primary" data-dismiss="modal">
+          <button id="submitProduct" type="button" class="btn btn-primary" data-dismiss="modal">
             Save product
           </button>
         </div>

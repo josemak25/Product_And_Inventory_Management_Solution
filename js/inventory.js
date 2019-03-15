@@ -1,21 +1,9 @@
 $(document).ready(function () {
 
-  //declare all form values
-  const $tr = $("#tablepopulate");
-  const formName = $("#name");
-  const formDescription = $("#describe");
-  const formQuantity = $("#prodQaun");
-  const formImageLink = $("#imgLnk");
-  const formPrice = $("#price");
-  const formCategory = $("#catId");
-  const formDate = $("#expireDate")
-  let products = [];
-
-
   //function to help print data on page
   function populate(product) {
     $tr.append(`
-      <tr id="${product.id}" class='table-row'>
+      <tr id="${product.id}">
           <td class="column1">${product.expireDate}</td>
           <td class="column2">${product.category}</td>
           <td class="column3">${product.name}</td>
@@ -23,7 +11,7 @@ $(document).ready(function () {
           <td class="column5">${product.qauntity}</td>
           <td class="column6">
           <div>
-              <button id="editButton" onclick="editProduct(${product.id})" id="editButton" data-toggle="modal" data-target="#exampleModal">
+              <button class="editButtons" onclick="editProduct(${product.id})" data-toggle="modal" data-target="#exampleModal">
                   <i class="fas fa-marker"></i>
               </button>
               <button id="deleteButton" onclick="deleteProduct(${product.id})">
@@ -66,52 +54,41 @@ $(document).ready(function () {
   };
   getAllDbDataOnPage()
 
-  //editfunction
-  editProduct = (id) => {
-    const product = products.find(e => e.id === id)
-    formName.val(`${product.name}`)
-    formPrice.val(`${product.price}`)
-    formQuantity.val(`${product.qauntity}`)
-    formDescription.val(`${product.description}`)
-    formImageLink.val(`${product.imageLink}`)
-    formCategory.val(`${product.category}`)
-    formDate.val(`${product.expireDate}`)
+  //on edit click update a product
+  $("#submitProduct").on("click", function (e) {
+    e.preventDefault();
+    const id = rowid.val()
+    const FormData = {
+      name: formName.val(),
+      description: formDescription.val(),
+      qauntity: formQuantity.val(),
+      imageLink: formImageLink.val(),
+      price: formPrice.val(),
+      category: formCategory.val(),
+      expireDate: formDate.val()
+    };
 
+    $.ajax({
+      type: "PATCH",
+      url: `http://localhost:3000/products/${id}`,
+      data: FormData,
+      success: () => {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000
+        });
+        Toast.fire({
+          type: "success",
+          title: "Updated product successfully"
+        });
 
-    //on edit click update a product
-    $("#editProduct").on("click", function (e) {
-      e.preventDefault();
-      const FormData = {
-        name: formName.val(),
-        description: formDescription.val(),
-        qauntity: formQuantity.val(),
-        imageLink: formImageLink.val(),
-        price: formPrice.val(),
-        category: formCategory.val(),
-        expireDate: formDate.val()
-      };
+        $.get(`http://localhost:3000/products/${id}`, function (data) {
 
-
-      $.ajax({
-        type: "PATCH",
-        url: `http://localhost:3000/products/${id}`,
-        data: FormData,
-        success: () => {
-          const Toast = Swal.mixin({
-            toast: true,
-            position: "top-end",
-            showConfirmButton: false,
-            timer: 3000
-          });
-          Toast.fire({
-            type: "success",
-            title: "Updated product successfully"
-          });
-          $.get(`http://localhost:3000/products/${id}`, function (data) {
-
-            let product = data;
-            $tr.append(`
-          <tr id="${product.id}" class='table-row'>
+          const product = data;
+          $(`#${id}`).empty()
+          $(`#${id}`).html(`
           <td class="column1">${product.expireDate}</td>
           <td class="column2">${product.category}</td>
           <td class="column3">${product.name}</td>
@@ -119,24 +96,22 @@ $(document).ready(function () {
           <td class="column5">${product.qauntity}</td>
           <td class="column6">
           <div>
-              <button id="editButton" onclick="editProduct(${product.id})" id="editButton" data-toggle="modal" data-target="#exampleModal">
+              <button id="editButton${product.id}" onclick="editProduct(${product.id})" data-toggle="modal" data-target="#exampleModal">
                   <i class="fas fa-marker"></i>
               </button>
               <button id="deleteButton" onclick="deleteProduct(${product.id})">
                   <i class="fas fa-trash"></i>
               </button>
           </div>
-      </td>
-  </tr>`);
-          });
-        },
-        error: () => {
-          console.log('failed to PUT')
-        }
-      });
+      </td>`);
+        });
+      },
+      error: () => {
+        console.log('failed to PUT')
+      }
     });
+  });
 
-  }
 
   // add new product
 
@@ -148,7 +123,8 @@ $(document).ready(function () {
       qauntity: formQuantity.val(),
       imageLink: formImageLink.val(),
       price: formPrice.val(),
-      category: formCategory.val()
+      category: formCategory.val(),
+      expireDate: formDate.val()
     };
     $("#addProduct").trigger("reset");
     $.ajax({
@@ -172,29 +148,63 @@ $(document).ready(function () {
   });
 
 
-
   // delete press delete a product
 
   deleteProduct = (id) => {
     const product = products.find(e => e.id === id)
-    $.ajax({
-      type: "DELETE",
-      url: `http://localhost:3000/products/${id}`,
-      success: () => {
-        $(`#${product.id}`).remove();
-        const Toast = Swal.mixin({
-          toast: true,
-          position: "top-end",
-          showConfirmButton: false,
-          timer: 3000
-        });
-
-        Toast.fire({
-          type: "success",
-          title: "Deleted successfully"
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.value) {
+        $.ajax({
+          type: "DELETE",
+          url: `http://localhost:3000/products/${id}`,
+          success: () => {
+            $(`#${product.id}`).remove();
+            const Toast = Swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000
+            });
+            Toast.fire({
+              type: "success",
+              title: "Deleted successfully"
+            });
+          }
         });
       }
-    });
+    })
   }
+})
+
+
+const $tr = $("#tablepopulate");
+const rowid = $("#id")
+const formName = $("#name");
+const formDescription = $("#describe");
+const formQuantity = $("#prodQaun");
+const formImageLink = $("#imgLnk");
+const formPrice = $("#price");
+const formCategory = $("#catId");
+const formDate = $("#expireDate")
+let products = [];
+
+//editfunction
+editProduct = (id) => {
+  const product = products.find(e => e.id === id)
+  formName.val(`${product.name}`)
+  formPrice.val(`${product.price}`)
+  formQuantity.val(`${product.qauntity}`)
+  formDescription.val(`${product.description}`)
+  formImageLink.val(`${product.imageLink}`)
+  formCategory.val(`${product.category}`)
+  formDate.val(`${product.expireDate}`)
+  rowid.val(id)
 }
-)
