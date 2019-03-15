@@ -72,7 +72,7 @@ $(document).ready(function () {
       type: "PATCH",
       url: `http://localhost:3000/products/${id}`,
       data: FormData,
-      success: () => {
+      success: (res) => {
         const Toast = Swal.mixin({
           toast: true,
           position: "top-end",
@@ -83,10 +83,7 @@ $(document).ready(function () {
           type: "success",
           title: "Updated product successfully"
         });
-
-        $.get(`http://localhost:3000/products/${id}`, function (data) {
-
-          const product = data;
+          const product = res;
           $(`#${id}`).empty()
           $(`#${id}`).html(`
           <td class="column1">${product.expireDate}</td>
@@ -104,7 +101,16 @@ $(document).ready(function () {
               </button>
           </div>
       </td>`);
-        });
+       products = products.filter(e => {
+        if (e.id === res.id) {
+          console.log("they match");
+          // console.log("product initial value", e)
+          // console.log("product new value", res)
+          //products(e)
+          return e = res;
+        }
+        else console.log("they dont match") 
+       })
       },
       error: () => {
         console.log('failed to PUT')
@@ -117,6 +123,18 @@ $(document).ready(function () {
 
   $("#addProduct").on("click", function (e) {
     e.preventDefault();
+  
+  
+  formName.val(`${product.name}`)
+  formPrice.val(`${product.price}`)
+  formQuantity.val(`${product.qauntity}`)
+  formDescription.val(`${product.description}`)
+  formImageLink.val(`${product.imageLink}`)
+  formCategory.val(`${product.category}`)
+  formDate.val(`${product.expireDate}`)
+    if (condition) {
+      
+    }
     const FormData = {
       name: formName.val(),
       description: formDescription.val(),

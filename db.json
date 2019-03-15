@@ -1,9 +1,9 @@
 {
   "products": [
     {
-      "name": "Iphone 5",
+      "name": "Iphone 1",
       "description": "A nice mobile phone",
-      "qauntity": "50",
+      "qauntity": "57",
       "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
       "price": "$50",
       "category": "fashion",
@@ -11,23 +11,13 @@
       "id": 1
     },
     {
-      "name": "Iphone 5",
-      "description": "A nice mobile phone",
+      "name": "Iphone 2",
+      "description": "A nice mobile",
       "qauntity": "9",
       "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
       "price": "$9",
-      "expireDate": "2019-03-27",
+      "expireDate": "2019-03-19",
       "category": "computing",
-      "id": 2
-    },
-    {
-      "name": "Iphone 4",
-      "description": "A nice mobile phone",
-      "qauntity": "90",
-      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
-      "price": "$90",
-      "expireDate": "2019-03-25",
-      "category": "fashion",
       "id": 3
     },
     {
