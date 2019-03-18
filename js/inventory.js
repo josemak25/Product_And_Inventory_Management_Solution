@@ -101,16 +101,10 @@ $(document).ready(function () {
               </button>
           </div>
       </td>`);
-       products = products.filter(e => {
-        if (e.id === res.id) {
-          console.log("they match");
-          // console.log("product initial value", e)
-          // console.log("product new value", res)
-          //products(e)
-          return e = res;
-        }
-        else console.log("they dont match") 
+        products = products.filter(prod => {
+          return prod.id !== res.id
        })
+       products.push(res)
       },
       error: () => {
         console.log('failed to PUT')
