@@ -1,22 +1,44 @@
 {
   "products": [
     {
-      "name": "Bugger",
-      "description": "A nice creamy meat bread",
-      "qauntity": "23",
+      "name": "Iphone 1",
+      "description": "A nice mobile phone",
+      "qauntity": "5",
       "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
-      "price": "242",
-      "category": "grocery",
+      "price": "$5",
+      "category": "fashion",
+      "expireDate": "2019-03-21",
       "id": 1
     },
     {
-      "name": "chicken salad",
-      "description": "A nice creamy meat bread",
-      "quantity": "23",
-      "imageLink": "https://d1bjorv296jxfn.cloudfront.net/s3fs-public/styles/recipes_header_image/public/recipe-images/sargento/California_ChickenSaladWrap_with_2_Cheese_Cheddar_web.jpg?itok=gaZPXHY0",
-      "price": "34",
-      "category": "grocery",
+      "name": "Iphone 58",
+      "description": "A nice mobile",
+      "qauntity": "900",
+      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
+      "price": "$900",
+      "expireDate": "2019-03-19",
+      "category": "computing",
       "id": 2
+    },
+    {
+      "name": "Iphone 2",
+      "description": "A nice mobile",
+      "qauntity": "9",
+      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
+      "price": "$9",
+      "expireDate": "2019-03-19",
+      "category": "computing",
+      "id": 3
+    },
+    {
+      "name": "Iphone 50",
+      "description": "A nice mobile phone",
+      "qauntity": "500",
+      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
+      "price": "$500",
+      "category": "fashion",
+      "expireDate": "2019-03-21",
+      "id": 4
     }
   ],
   "category": [
