@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="css/inventory.css">
+</head>
+
+<body>
+  <!--Start of Navbar-->
+  <header id="headerNav" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo.svg" alt="ProdMag Logo">
+    </a>
+    <div class="logoText">
+      <span class="prod">P</span>rod
+      <span class="mag">M</span>ag</div>
+    <a class="nav-link" href="#">
+      <button id="Logout" class="nav-item">Logout</button>
+    </a>
+  </header>
+  <!--End of Navbar-->
+
+  <!--Start of Table-->
+  <div class="limiter">
+    <div class="container-table100">
+      <div class="wrap-table100">
+        <div class="table100">
+          <table id="example" style="width:100%">
+            <thead>
+              <tr class="table100-head">
+                <th class="column1">Expiring Date</th>
+                <th class="column2">Category</th>
+                <th class="column3">Name</th>
+                <th class="column4">Price</th>
+                <th class="column5">Quantity</th>
+                <th class="column6">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tablepopulate">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End of Table-->
+
+  <!--start of edit modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Product details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="post">
+            <div class="form-group formGroupField">
+              <input id="id" hidden type="text">
+              <label for="formGroupExampleInput">Name</label>
+              <input type="text" class="form-control modalInput" id="name" placeholder="Name of product" required />
+              <label for="formGroupExampleInput">Price</label>
+              <input type="text" class="form-control modalInput" id="price" placeholder="Price of product $34" required />
+              <label for="formGroupExampleInput">Quantity</label>
+              <input type="text" class="form-control modalInput" id="prodQaun" placeholder="Quantity of the product 34" required />
+              <label for="formGroupExampleInput">Expiring date</label>
+              <input type="text" class="form-control modalInput" id="expireDate" placeholder="Please pick an expiring date"
+                required />
+              <label for="formGroupExampleInput">Product description</label>
+              <input type="text" class="form-control modalInput" id="describe" placeholder="A little discription of the product" required
+              />
+              <label for="formGroupExampleInput">Image for product</label>
+              <input type="text" class="form-control modalInput" id="imgLnk" placeholder="Insert an online resource of product image"
+                required />
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Product category</label>
+                <select class="form-control" id="catId">
+                  <option>computing</option>
+                  <option>grocery</option>
+                  <option>fashion</option>
+                  <option>electronics</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="closeButton" type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button id="submitProduct" type="button" class="btn btn-primary" data-dismiss="modal">
+            Save product
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of registration modal -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-datepicker.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="js/inventory.js"></script>
+</body>
+
+</html>

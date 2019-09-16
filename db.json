@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "name": "Iphone 1",
+      "description": "A nice mobile phone",
+      "qauntity": "5",
+      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
+      "price": "$5",
+      "category": "fashion",
+      "expireDate": "2019-03-21",
+      "id": 1
+    },
+    {
+      "name": "Iphone 58",
+      "description": "A nice mobile",
+      "qauntity": "900",
+      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
+      "price": "$900",
+      "expireDate": "2019-03-19",
+      "category": "computing",
+      "id": 2
+    },
+    {
+      "name": "Iphone 2",
+      "description": "A nice mobile",
+      "qauntity": "9",
+      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
+      "price": "$9",
+      "expireDate": "2019-03-19",
+      "category": "computing",
+      "id": 3
+    },
+    {
+      "name": "Iphone 50",
+      "description": "A nice mobile phone",
+      "qauntity": "500",
+      "imageLink": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=burrito-chicken-close-up-461198.jpg&fm=jpg",
+      "price": "$500",
+      "category": "fashion",
+      "expireDate": "2019-03-21",
+      "id": 4
+    }
+  ],
+  "category": [
+    {
+      "computing": "computing"
+    },
+    {
+      "grocery": "grocery"
+    },
+    {
+      "fashion": "fashion"
+    },
+    {
+      "electronics": "electronics"
+    }
+  ],
+  "admin": [
+    {
+      "username": "username"
+    },
+    {
+      "password": "password"
+    }
+  ]
+}
